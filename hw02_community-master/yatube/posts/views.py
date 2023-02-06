@@ -6,7 +6,7 @@ from .models import Post, Group
 
 def index(request):
     post_list = Post.objects.all().order_by('-pub_date')
-    paginator = Paginator(post_list, 10) 
+    paginator = Paginator(post_list, 10)
 
     page_number = request.GET.get('page')
 
