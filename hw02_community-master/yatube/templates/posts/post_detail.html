@@ -1,7 +1,7 @@
 {% extends "base.html" %}
   <head>
     {% block title %}
-    Пост <!-- Первые 30 букв поста -->
+    Пост {{ post.text|truncatechars:30 }}
     {% endblock %}
   </head>
   <body>      
